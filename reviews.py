@@ -8,7 +8,7 @@ with open('reviews.txt', 'r') as f:
 			print(len(data))
 print('檔案讀取完了總共有', len(data), '筆資料')
 
-#算留言平均長度
+#算留言平均長度''
 
 sum_len = 0
 for d in data: #在data的每一筆資料命名為d
@@ -23,6 +23,14 @@ for d in data:
 		new.append(d)
 print('一共有', len(new), '筆長度留言小於100')
 print(new[0])
+
+#篩選2
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('一共有', len(good), '筆留言有提到good')
+print(good[0])
 
 
 print(data[0])
